@@ -1,22 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hello World</title>
   <style>
-    html, body { height: 100%; margin: 0; }
+    :root {
+      --hello-color: #0a66ff; /* blue */
+      --bg: #f9fafb;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
     body {
       display: grid;
-      place-items: center;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: #fff;
-      color: #111;
+      place-items: center; /* keep same centered layout */
+      background: var(--bg);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     }
-    h1 { margin: 0; font-size: clamp(2rem, 6vw, 4rem); }
+    .hello {
+      color: var(--hello-color);   /* blue text */
+      font-weight: 800;            /* bold */
+      font-size: clamp(2.5rem, 8vw, 5rem); /* larger text */
+      line-height: 1.1;
+      margin: 0;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <h1 class="hello">Hello World!</h1>
 </body>
 </html>
